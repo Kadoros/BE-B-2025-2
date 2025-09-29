@@ -7,3 +7,4 @@
 - 우승자 쉼표 구분 string marge
 - IllegalArgumentException
 - 차수 결과 출력 
+- Race class 만등기
