@@ -1,0 +1,9 @@
+- 라운드 만들기
+- 경주 할 자동차 이름 부여 
+- name validation (5자 보다 작음)
+- splitting car_names input
+- 무작위 문자 산출 후 전진 유무 판단
+- 우승자 알려주기
+- 우승자 쉼표 구분 string marge
+- IllegalArgumentException
+- 차수 결과 출력 
