@@ -14,12 +14,14 @@ public class Car {
     }
 
     public void move() {
-        int randNumber = Randoms.pickNumberInRange(0,9);
-        if(randNumber >= 4){
+        move(Randoms.pickNumberInRange(0, 9));
+    }
+
+    public void move(int randNumberInput) {
+        if (randNumberInput >= 4) {
             position++;
         }
     }
-
     public String getName() {
         return name;
     }
