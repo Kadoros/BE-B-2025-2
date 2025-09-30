@@ -1,7 +1,7 @@
 package racingcar;
 
-import camp.nextstep.edu.missionutils.Console;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Race {
@@ -20,14 +20,7 @@ public class Race {
         this.trials = trials;
     }
 
-    public List<Car> getCars() {
-        return cars;
-    }
-
-    public int getTrials() {
-        return trials;
-    }
-
+    
     public void start() {
         for (int i = 0; i < trials; i++) {
             for (Car car : cars) {
@@ -35,6 +28,22 @@ public class Race {
             }
             printRoundResult();
         }
+    }
+
+    public List<Car> findWinners() {
+        int maxDistance = 0;
+        for (Car car : cars) {
+            if(car.getPosition() >maxDistance){
+                maxDistance=car.getPosition();
+            }
+        }
+        List<Car> winners = new ArrayList<>();
+        for (Car car : cars) {
+            if (car.getPosition() == maxDistance) {
+                winners.add(car);
+            }
+        }
+        return winners;
     }
 
     public void printRoundResult() {

@@ -16,9 +16,9 @@ public class RaceController {
         if (!input.matches(NAME_REGEX)) {
             throw new IllegalArgumentException("잘못된 입력입니다. 각 이름은 1~5글자이며 쉼표로 구분해야 합니다.");
         }
-        String[] car_names = input.split(",");
+        String[] carNames = input.split(",");
         List<Car> cars=new ArrayList<>();
-        for (String name : car_names) {
+        for (String name : carNames) {
             cars.add(new Car(name));
         }
 
