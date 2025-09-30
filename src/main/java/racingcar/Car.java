@@ -1,14 +1,20 @@
 package racingcar;
 
+import camp.nextstep.edu.missionutils.Randoms;
+
 public class Car {
     private final String name;
     private int position = 0;
 
     public Car(String name) {
+        if (name == null || name.trim().isEmpty() || name.length() > 5) {
+            throw new IllegalArgumentException("자동차 이름은 1~5글자여야 합니다.");
+        }
         this.name = name;
     }
 
-    public void move(int randNumber) {
+    public void move() {
+        int randNumber = Randoms.pickNumberInRange(0,9);
         if(randNumber >= 4){
             position++;
         }
