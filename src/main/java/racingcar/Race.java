@@ -33,6 +33,14 @@ public class Race {
             for (Car car : cars) {
                 car.move(); // 자동차가 움직이는 로직은 Car 클래스가 담당
             }
+            printRoundResult();
         }
+    }
+
+    public void printRoundResult() {
+        for (Car car : cars) {
+            System.out.println(car.getName() + " : " + "-".repeat(car.getPosition()));
+        }
+        System.out.println();
     }
 }
