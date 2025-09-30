@@ -38,6 +38,17 @@ public class RaceController {
         Race race = new Race(cars, trials);
         race.start();
 
-        System.out.println("최종 우승자 : " + " ");
+        System.out.println("최종 우승자 : " + joinWinnerNames(race.findWinners()));
+    }
+
+    private String joinWinnerNames(List<Car> winners) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < winners.size(); i++) {
+            sb.append(winners.get(i).getName());
+            if (i < winners.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        return sb.toString();
     }
 }
